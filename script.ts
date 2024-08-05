@@ -15,15 +15,10 @@ const getUserFromDatabase = (userId: number): User => {
     };
 };
 
-const saveUserToDatabase = (userId: number, user: User): void => {
-    // Mock function to save updated user data
-    console.log('User saved to database:', user);
-};
 
 const updateUser = (userId: number, userDetails: Partial<User>): void => {
     const existingUser = getUserFromDatabase(userId);
     const updatedUser = { ...existingUser, ...userDetails };
-    saveUserToDatabase(userId, updatedUser);
     displayUpdatedUser(updatedUser);
 };
 
