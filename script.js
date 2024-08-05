@@ -19,14 +19,9 @@ var getUserFromDatabase = function (userId) {
         address: '123 Main St'
     };
 };
-var saveUserToDatabase = function (userId, user) {
-    // Mock function to save updated user data
-    console.log('User saved to database:', user);
-};
 var updateUser = function (userId, userDetails) {
     var existingUser = getUserFromDatabase(userId);
     var updatedUser = __assign(__assign({}, existingUser), userDetails);
-    saveUserToDatabase(userId, updatedUser);
     displayUpdatedUser(updatedUser);
 };
 var displayUpdatedUser = function (user) {
